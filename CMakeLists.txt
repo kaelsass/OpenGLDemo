@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES main.cpp GLAD/src/glad.c)
 set(HELLO_TRIANGLE_FILES hello_triangle.cpp GLAD/src/glad.c)
+set(HELLO_SHADERS_FILES hello_shaders.cpp GLAD/src/glad.c)
+
 set(HEADER_FILES shader.h)
 
 set(dir ${CMAKE_CURRENT_SOURCE_DIR})
@@ -29,3 +31,5 @@ target_link_libraries(OpenGLSetup glfw)
 add_executable(HelloTriangle ${HELLO_TRIANGLE_FILES})
 target_link_libraries(HelloTriangle glfw)
 
+add_executable(HelloShaders ${HELLO_SHADERS_FILES})
+target_link_libraries(HelloShaders glfw)
