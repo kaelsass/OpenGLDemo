@@ -3,7 +3,7 @@ project(OpenGLSetup)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp GLAD/src/glad.c)
+set(HELLO_TEXTURES_FILES hello_textures.cpp GLAD/src/glad.c)
 set(HELLO_TRIANGLE_FILES hello_triangle.cpp GLAD/src/glad.c)
 set(HELLO_SHADERS_FILES hello_shaders.cpp GLAD/src/glad.c)
 
@@ -25,8 +25,8 @@ file(COPY shaders DESTINATION ${dir}/build)
 #Add deps
 add_subdirectory(dependencies)
 
-add_executable(OpenGLSetup ${SOURCE_FILES} ${HEADER_FILES})
-target_link_libraries(OpenGLSetup glfw)
+add_executable(HelloTextures ${HELLO_TEXTURES_FILES} ${HEADER_FILES})
+target_link_libraries(HelloTextures glfw)
 
 add_executable(HelloTriangle ${HELLO_TRIANGLE_FILES})
 target_link_libraries(HelloTriangle glfw)
